@@ -1,16 +1,9 @@
-# 初始化（如果尚未 init）
-git init
+# FastAPI on GitHub Codespaces / Dev Containers
 
-# 建立 README
-echo "# My Codespaces Ready Repo" > README.md
+## Quick Start
 
-# 建立資料夾與檔案
-mkdir -p .devcontainer
-# 依你選擇複製 devcontainer.json（方案 A 或 B）
-# 若選 B，也要建立 Dockerfile（及可選 setup.sh）
-
-git add .
-git commit -m "chore: add minimal devcontainer setup for Codespaces"
-git branch -M main
-git remote add origin https://github.com/<your-user>/<your-repo>.git
-git push -u origin main
+1. Open in GitHub Codespaces (or locally with Dev Containers extension).
+2. After container builds, install deps (auto via postCreateCommand).
+3. Run:
+   ```bash
+   uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
