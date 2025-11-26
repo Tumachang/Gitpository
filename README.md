@@ -6,4 +6,4 @@
 2. After container builds, install deps (auto via postCreateCommand).
 3. Run:
    ```bash
-   uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
+   uvicorn app.main:app --reload --host 0.0.0.0 --port $Port <--write your set Port Number
