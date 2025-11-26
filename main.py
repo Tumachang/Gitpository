@@ -3,7 +3,7 @@ from pydantic import BaseModel
 import os
 import sqlalchemy as sa
 
-DATABASE_URL = os.environ.get("dpg-d4j73oumcj7s73bbeaeg-a")  # 在 Render 上設定為 Internal URL
+DATABASE_URL = os.environ.get("postgresql://pythonmember_user:4ufqkeLNv18yJzOFnZQoFKf0HxhxahJ2@dpg-d4j73oumcj7s73bbeaeg-a/pythonmember")  # 在 Render 上設定為 Internal URL
 engine = sa.create_engine(DATABASE_URL, pool_pre_ping=True)
 
 app = FastAPI()
