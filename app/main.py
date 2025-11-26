@@ -3,6 +3,8 @@ from pydantic import BaseModel
 import os
 import sqlalchemy as sa
 
+DATABASE_URL = os.environ.get("dpg-d4j73oumcj7s73bbeaeg-a")  # 在 Render 上設定為 Internal URL
+engine = sa.create_engine(DATABASE_URL, pool_pre_ping=True)
 
 app = FastAPI(title="Codespaces FastAPI Example")
 
