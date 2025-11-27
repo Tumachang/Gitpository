@@ -6,3 +6,4 @@ app = FastAPI(title="FastAPI on Codespaces & Render")
 @app.get("/")
 def read_root():
     return {"message": "Hello from Codespaces + FastAPI + Render!"}
+app.include_router(health_router, prefix="/api")
