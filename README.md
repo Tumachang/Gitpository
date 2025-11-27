@@ -1,9 +1,11 @@
-# FastAPI on GitHub Codespaces / Dev Containers
 
-## Quick Start
+# FastAPI on Codespaces (Image-based) & Render
 
-1. Open in GitHub Codespaces (or locally with Dev Containers extension).
-2. After container builds, install deps (auto via postCreateCommand).
+This repo demonstrates a FastAPI service developed in GitHub Codespaces using an image-only devcontainer (no Dockerfile) and deployed to Render as a Web Service.
+
+## Local (Codespaces)
+1. Open this repo in GitHub Codespaces.
+2. The devcontainer will install dependencies automatically.
 3. Run:
    ```bash
-   uvicorn app.main:app --reload --host 0.0.0.0 --port $Port <--write your set Port Number
+   uvicorn app.main:app --host 0.0.0.0 --port 8000
