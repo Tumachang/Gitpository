@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: fastapi-on-render
+    env: python
+    plan: free              # 可先用 Free 測試，流量/休眠限制請注意
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn -k uvicorn.workers.UvicornWorker app.main:app --bind 0.0.0.0:8000"
+    autoDeploy: true
+    region: singapore       # 可換成你靠近使用者的區域
+    healthCheckPath: "/api/health"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
